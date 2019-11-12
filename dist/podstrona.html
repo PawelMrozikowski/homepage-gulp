@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+        <header class="logo__bar">
+    
+            <img class="logo__photo" src="assets/img/logo.png" alt="logo">
+    
+            <div>
+                    <button class="navigation__burger navigation__burger--js" aria-label="otworz menu">&#9776</button>
+                     
+                <nav class="navigation">
+                    
+                    <ul class="navigation__list navigation__list--visible navigation__list--js">
+                        <li class="navigation__item"><a class="navigation__link" href="index.html">Strona główna</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="podstrona.html">Podstrona</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="o_Nas.html">O Nas</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="kontakt.html">Kontakt</a></li>
+    
+    
+                    </ul>
+                </nav>
+    
+            </div>
+    
+        </header>
+        
+    
+        <main class="main">
+            <header>
+                <h1 class="mainHeader">Jak stworzyć prawidłowego <strong>HTML-a</strong></h1>
+            </header>
+            <article class="subpage">
+    
+                <h2 class="section__header">Wskazówki</h2>
+    
+                <img clas="subpage_pic" src="assets/img/home.jpg" alt="house">
+    
+                <p class="paragraph">'Article' moze miec tez swoj naglowek i stopke</p>
+    
+                <p class="paragraph"> ipsum, dolor sit amet consectetur adipisicing elit. Fugit obcaecati quas ex voluptatem
+                    vitae
+                    consequuntur
+                    harum praesentium, sit optio explicabo, quo ratione unde. Non ab esse possimus quasi, sint dolore?</p>
+    
+                <footer>
+                    to jest stopka artykulu, ktorej autorem jest Lorem ipsum
+                </footer>
+    
+    
+    
+            </article>
+            <br>
+    
+            <article class="form">
+                <form action="http://dev.cotenfrontend.pl" method="POST">
+                    <p>Wypełnij formularz</p>
+    
+                    <label for="name">Imie</label><br>
+                    <input type="text" name="name" id="name" required  autofocus autocapitalize="on"><br>
+                    
+                    <label for="riddle">...</label><br>
+                    <input type="text" name="riddle" id="riddle" value="cotenfrontend"><br>
+    
+                    <label for="mail">email:</label><br>
+                    <input type="email" name="email" id="mail"><br>
+    
+                    <label for="password">Hasło:</label><br>
+                    <input type="password" name="password" id="password"><br>
+    
+                    <label for="search">Szukaj:</label><br>
+                    <input type="search" name="search" id="search" placeholder="wpisz frazę"><br>
+    
+                    <label for="age">Wiek</label><br>
+                    <input type="number" name="age" id="age" min="18" max="99" value="18"><br>
+                    
+                    <label for="birthday">Data urodzin:</label><br>
+                    <!--<input type="data" name="birthday" id="birthday"  required pattern="\d{4}-\d{2}-\d{2}"> ><br> -->
+    
+                    <label for="country">Kraj:</label><br>
+                    <select name="country" id="country">
+                        <option value="poland">Polska</option>
+                        <option value="UK">Wielka Brytania</option>
+                        <option value="USA">USA</option>
+                    </select><br>
+    
+                    <fieldset>
+                        <legend>Czy byłeś juz naszym klientem</legend>
+                        <input type="radio" value="yes"> tak<br>
+                        <input type="radio" value="no"> nie<br>
+                    </fieldset>
+    
+                    <fieldset>
+                        <legend>Z jakich usług korzystałeś?</legend>
+                        <input type="checkbox" value="projekt">Projekt<br>
+                        <input type="checkbox" value="doradztwo">Doradztwo<br>
+                        <input type="checkbox" value="odbiór">Odbiór<br>
+                    </fieldset><br>
+    
+                    <textarea name="text" id="text" cols="30" rows="10">Wiadomość:</textarea><br>
+    
+                    <label for="file">Załącz pliki</label><br>
+                    <input type="file" name="file" id="file" multiple><br>
+    
+                    
+                    <button type="reset">Wyczyść</button><br>
+    
+                    <input type="submit" value="wyślij formularz"><br>
+    
+    
+    
+    
+                </form>
+            </article>
+        </main>
+    
+        <footer class="footer footer--js">
+            Stopka mojej strony domowej
+        </footer>
+        <script src="js/main.js"></script>
+    
+    </body>
+    
+    </html>
