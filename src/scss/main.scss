@@ -11,7 +11,7 @@ html {
 }
 
 body {
-	background: rgb(224, 219, 210);
+	background: linear-gradient( 180deg, #e7bf99, #f0eae1);
 	display: grid;
 	grid-template-areas: "header"
 	"main"
@@ -25,7 +25,7 @@ body {
 
 .logo__bar {
 	grid-area: header;
-	background: linear-gradient(80deg, #000000, #696868);
+	background: linear-gradient(to left, #000000, #696868);
 	font-size: 16px;
 	padding: 10px 10px;
 	display: flex;
@@ -72,28 +72,23 @@ margin-right: 20px;
 	font-style: italic;
 	font-size: 20px;
 
-	
+	&__link {
+		text-decoration: none;
+		color: #c96929;
+		&:hover{
+			color: rgb(187, 147, 16);
+			transition: .5s;
+			}
+	}
+	&__list{
+		background: #c9692927;
+	padding: 0;}
+	&__item {
+		display: inline;
+		padding: 10px;
+	}
+
 }
-
-
-.navigation__list {
-	
-	background: #c9692927;
-	padding: 0;
-
-}
-
-
-.navigation__item {
-	display: inline;
-	padding: 10px;
-}
-
-.navigation__link {
-	text-decoration: none;
-	color: #c96929;
-}
-
 
 
 .main {
@@ -102,16 +97,15 @@ margin-right: 20px;
 	max-width: 70%;
 	margin: 20px auto;
 	padding: 16px;
+
+	&__header {
+		color: tomato;
+		font-size: 35 px;
+		&--red {
+			color: darkred;
+	}
 }
 
-.main__header {
-	color: tomato;
-	font-size: 35 px;
-}
-
-.main__header--red {
-	color: darkred;
-}
 
 p {
 	margin: 10px;
@@ -129,27 +123,29 @@ p {
 
 .about {
 	position: relative;
+	&__test {
+		width: 100px;
+		height: 100px;
+		background: #c9692969;
+		font-size: 16px;
+		margin-right: 20px;
+		box-sizing: border-box;
+		float: left;
+	}
+	
 }
 
-.about__test {
-	width: 100px;
-	height: 100px;
-	background: #c9692969;
-	font-size: 16px;
-	margin-right: 20px;
-	box-sizing: border-box;
-	float: left;
-}
 
 .diary__header {
 	text-align: center;
 	letter-spacing: 0.5em;
 	color: rgb(21, 117, 214);
+
+	&__link {
+		text-transform: italic;
+	}
 }
 
-.diary__link {
-	text-transform: italic;
-}
 
 .grid {
 
@@ -175,74 +171,72 @@ p {
 
 
 
-.contact__map {
-	width: 100%;
-	max-width: 80%;
-	display: flex;
-	margin: 20px auto;
+.contact{
+
+	&__card {
+		background: #F8F8F8;
+		border: 2px solid #cd5700;
+		border-radius: 16px;
+		width: 624px;
+		max-width: 100%;
+		height: 320px;
+		padding: 32px;
+		
+		display: flex;
+		font-family: Arial, Helvetica, sans-serif;
+		
+	}
+
+	&__map {
+		width: 100%;
+		max-width: 80%;
+		display: flex;
+		margin: 20px auto;}
+
+	&__photo {
+		display: flex;
+		max-width: 20%;
+		width: 100%;
+		height: 40%;
+		border: 2px solid black;
+		border-radius: 50%
+		
+	}
 	
+	&__person__header {
+		margin-left: 10px;
 	
-}
+	}
 
-.contact__card {
-	background: #F8F8F8;
-	border: 2px solid #cd5700;
-	border-radius: 16px;
-	width: 624px;
-	max-width: 100%;
-	height: 320px;
-	padding: 32px;
+	&__person__name {
+		color: #000000;
+		margin: 0;
+		font-weight: normal;
+		font-size: 36px;
+		letter-spacing: 0.2em;
 	
-	display: flex;
-	font-family: Arial, Helvetica, sans-serif;
+	}
+
+	&__person__description {
+		color: #000000;
+		line-height: 22px;
+		
+	}
+
+	&__person__link {
+
+		color: rgb(48, 151, 48);
+		text-decoration: none;
+		
+	}
+
+	&__person__proffesion {
+
+		color: #696868;
+		font-style: italic;
 	
-}
-
-
-
-
-.contact__photo {
-	
-	max-width: 90%;
-	width: 100%;
-	border: 2px solid black;
-	border-radius: 50%
-	
-}
-
-.contact__person__header {
-	margin-left: 10px;
-}
-
-.contact__person__name {
-	color: #000000;
-	margin: 0;
-	font-weight: normal;
-	font-size: 36px;
-	letter-spacing: 0.2em;
-
-}
-
-.contact__person__proffesion {
-
-	color: #696868;
-	font-style: italic;
-
-}
-
-.contact__person__description {
-	color: #000000;
-	line-height: 22px;
-	
-}
-
-
-.contact__person__link {
-
-	color: rgb(48, 151, 48);
-	text-decoration: none;
-	
-}
+	}
+	}
 
 
 .date__table {
@@ -286,17 +280,17 @@ p {
 	text-align: center;
 	
 flex: 0 0 100px; /* flex-grow, flex-shrink, flex-basis*/
+
+&--bigger {
+	font-size: 40px;
+	}
+
+&--self {
+	align-self: flex-end;
+}
 	
 }
 
-.flex__item--bigger {
-	font-size: 40px;
-
-}
-
-.flex__item--self {
-	align-self: flex-end;
-}
 
 .test {
 	width: 100%;
@@ -307,5 +301,5 @@ flex: 0 0 100px; /* flex-grow, flex-shrink, flex-basis*/
 	background-repeat: repeat-x;
 	background-attachment: scroll;
 	background-size: cover;
-	
+	}
 }
